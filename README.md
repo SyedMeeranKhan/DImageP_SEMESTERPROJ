@@ -10,6 +10,10 @@ Implemented techniques:
 - Global Histogram Equalization
 - Linear Contrast Stretching
 - Gamma Correction
+- Logarithmic Transform
+- Negative Image
+- Thresholding
+- Bit-Plane Slicing
 
 ## Project structure
 
@@ -40,4 +44,6 @@ Open the local URL printed in the terminal.
 - Grayscale and RGB are both supported:
   - Grayscale images are processed directly.
   - Color images are treated as RGB; histogram equalization is applied on the luminance channel (Y) in YCrCb to reduce color shifts.
-- Gamma correction in the UI currently uses a fixed gamma value (see `enhance_image` in `app.py`). If you want a slider, add a `st.slider` in the sidebar and pass it through.
+- **Gamma Correction**: Now includes a dynamic slider in the sidebar to adjust $\gamma$.
+- **Thresholding**: Interactive slider to set the cutoff value (0-255).
+- **Bit-Plane Slicing**: Slider to select the specific bit plane (0-7).
